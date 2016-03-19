@@ -1,4 +1,4 @@
-FROM davask/apache2-php5
+FROM davask/d-apache2-php5
 MAINTAINER davask <contact@davaskweblimited.com>
 
 LABEL dwl.app.framework="wordpress"
