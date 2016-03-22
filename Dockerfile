@@ -9,5 +9,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 
 RUN apt-get install -y php5-gd
+RUN apt-get install -y sendmail
 
 COPY ./dwl-init-3-wordpress.sh /tmp/dwl-init-3-wordpress.sh
+
+ENTRYPOINT ["/bin/bash"]
