@@ -10,7 +10,8 @@ RUN apt-get update
 
 RUN apt-get install -y php5-gd
 
-# RUN apt-get install -y sendmail
-#RUN ls -la /usr/sbin/sendmail
+RUN apt-get install -y sendmail
+
+RUN rm -rf /var/lib/apt/lists/*
 
 COPY ./dwl-init-3-wordpress.sh /tmp/dwl-init-3-wordpress.sh
