@@ -14,5 +14,4 @@ RUN apt-get install -y sendmail
 
 RUN rm -rf /var/lib/apt/lists/*
 
-COPY ./dwl-wordpress-php5-apache2-php.ini /etc/php5/apache2/php.ini
 COPY ./dwl-init-3-wordpress.sh /tmp/dwl-init-3-wordpress.sh
