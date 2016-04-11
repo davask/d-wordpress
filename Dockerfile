@@ -14,4 +14,7 @@ RUN apt-get install -y sendmail
 
 RUN rm -rf /var/lib/apt/lists/*
 
-COPY ./dwl-init-3-wordpress.sh /tmp/dwl-init-3-wordpress.sh
+# Copy instantiation specific file
+COPY ./wordpress.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-wordpress.sh
+# update counter for next container
+RUN DWL_INIT_COUNT=$(($DWL_INIT_COUNT+1))
