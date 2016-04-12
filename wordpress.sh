@@ -3,7 +3,9 @@
 service sendmail start
 echo "Sendmail Initialized";
 
-chown :www-data -R /var/www/html/*
+ln -s ${DWL_USER_DIR}/${DWL_APP_DIR} /var/www/html
+
+chown :www-data -R /var/www/html
 find /var/www/html -type d -exec chmod 775 {} \;
 find /var/www/html -type f -exec chmod 664 {} \;
 
