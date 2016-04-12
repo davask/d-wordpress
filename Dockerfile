@@ -11,4 +11,4 @@ RUN rm -rf /var/lib/apt/lists/*
 # Copy instantiation specific file
 COPY ./wordpress.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-wordpress.sh
 # update counter for next container
-RUN DWL_INIT_COUNT=$(($DWL_INIT_COUNT+1))
+ENV DWL_INIT_COUNT $(($DWL_INIT_COUNT+1))
