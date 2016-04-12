@@ -3,15 +3,9 @@ MAINTAINER davask <contact@davaskweblimited.com>
 
 LABEL dwl.app.framework="wordpress"
 
-# disable interactive functions
-ENV DEBIAN_FRONTEND noninteractive
-
 RUN apt-get update
-
 RUN apt-get install -y php5-gd
-
 RUN apt-get install -y sendmail
-
 RUN rm -rf /var/lib/apt/lists/*
 
 # Copy instantiation specific file
