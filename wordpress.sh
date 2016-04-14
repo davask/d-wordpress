@@ -1,6 +1,6 @@
 #!/bin/bash
-dwl_func_wordpress () {
-    echo ">>> this is a wordpress init function";
+dwl_func_wordpress() {
+    echo ">> ${1}";
 };
 
 echo "Wordpress Initialized";
