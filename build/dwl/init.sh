@@ -36,6 +36,7 @@ echo ">> Apache2 initialized";
 . ${dwlDir}/sendmail.sh
 echo ">> Sendmail initialized";
 
+. ${dwlDir}/get-wordpress.sh
 . ${dwlDir}/fix-wordpress-permissions.sh
 echo ">> Wordpress initialized";
 
