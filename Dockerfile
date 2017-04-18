@@ -1,13 +1,8 @@
-FROM davask/d-apache2-php5
-MAINTAINER davask <contact@davaskweblimited.com>
+FROM davask/d-php-letsencrypt:5.6-a2.4-u14.04
+MAINTAINER davask <docker@davaskweblimited.com>
+LABEL dwl.app.cms="WordPress"
 
-LABEL dwl.app.framework="wordpress"
-
-RUN apt-get update
-RUN apt-get install -y php5-gd
-RUN rm -rf /var/lib/apt/lists/*
-
-# Declare instantiation counter
-ENV DWL_INIT_COUNT 3
 # Copy instantiation specific file
-COPY ./wordpress.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-wordpress.sh
+COPY ./build/dwl/fix-wordpress-permissions.sh /dwl/fix-wordpress-permissions.sh
+COPY ./build/dwl/init.sh /dwl/init.sh
+
