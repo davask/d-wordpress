@@ -44,6 +44,7 @@ d-wordpress-mysql:
   - 65501:3306/tcp
   environment:
     MYSQL_ROOT_PASSWORD: secret
+    MYSQL_DATABASE: wordpress
   hostname: localhost
   image: mysql:latest
   volumes:
