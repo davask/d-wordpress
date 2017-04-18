@@ -9,7 +9,7 @@ buildDir=${4};
 # docker-compose.yml #
 ######################
 
-echo "d-php-letsencrypt:
+echo "d-wordpress:
   ports:
   - 65500:80/tcp
   - 65502:22/tcp
@@ -39,6 +39,16 @@ echo "d-php-letsencrypt:
   - ${rootDir}/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
   - ${rootDir}/volumes/home/username/files:/home/username/files
   working_dir: /var/www/html
+d-wordpress-mysql:
+  ports:
+  - 65501:3306/tcp
+  environment:
+    MYSQL_ROOT_PASSWORD: secret
+  hostname: localhost
+  image: mysql:latest
+  volumes:
+  - ${rootDir}/volumes/home/username/db:/docker-entrypoint-initdb.d
+  - ${rootDir}/volumes/home/username/mysql_data:/var/lib/mysql
 " > ${rootDir}/docker-compose.yml
 
 echo "docker-compose.yml generated with wordpress:${branch}";
