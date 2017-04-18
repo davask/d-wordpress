@@ -24,7 +24,7 @@ d-php-letsencrypt:
   volumes:
   - /home/dwl/docker-images/app/d-wordpress/build/etc/letsencrypt:/etc/letsencrypt
   - /home/dwl/docker-images/app/d-wordpress/build/etc/apache2/ssl:/etc/apache2/ssl
-  - /home/dwl/docker-images/app/d-wordpress/volumes/proxy/log/localhost/apache2:/var/log/apache2
+  - /home/dwl/docker-images/app/d-wordpress/volumes/log/localhost/apache2:/var/log/apache2
   - /home/dwl/docker-images/app/d-wordpress/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
   - /home/dwl/docker-images/app/d-wordpress/volumes/home/username/files:/home/username/files
   working_dir: /var/www/html
