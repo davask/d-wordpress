@@ -11,6 +11,7 @@ buildDir=${4};
 
 echo "FROM davask/d-php-letsencrypt:${parentBranch}
 MAINTAINER davask <docker@davaskweblimited.com>
+USER root
 LABEL dwl.app.cms=\"WordPress\"" > ${rootDir}/Dockerfile
 echo "
 
