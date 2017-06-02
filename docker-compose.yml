@@ -18,7 +18,8 @@ d-wordpress:
     DWL_SSLKEY_CN: davaskweblimited.com
     DWL_CERTBOT_EMAIL: docker@davaskweblimited.com
     DWL_CERTBOT_DEBUG: 'false'
-  image: davask/d-wordpress:4.4.2-p5.6-a2.4-u14.04
+    DWL_PHP_DATETIMEZONE: Europe/Paris
+  image: davask/d-wordpress:4.4.2-p5.6-a2.4-d8.8
   hostname: localhost
   net: bridge
   volumes:
