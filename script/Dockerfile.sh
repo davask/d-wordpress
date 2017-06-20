@@ -25,6 +25,7 @@ RUN mv /dwl/default/var/www/wordpress /dwl/default/var/www/html
 COPY ./build/dwl/get-wordpress.sh /dwl/get-wordpress.sh
 COPY ./build/dwl/fix-wordpress-permissions.sh /dwl/fix-wordpress-permissions.sh
 COPY ./build/dwl/init.sh /dwl/init.sh
+USER admin
 " >> ${rootDir}/Dockerfile
 
 echo "Dockerfile generated with wordpress";
