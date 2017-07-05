@@ -9,7 +9,7 @@ COPY ./build/dwl/get-wordpress.sh \
 ./build/dwl/init.sh \
 /dwl/
 
-CMD ["/dwl/init.sh && service sendmail start && apachectl -k graceful && /bin/bash"]
+# CMD ["/dwl/init.sh && service sendmail start && apachectl -k graceful && /bin/bash"]
 
 RUN chmod +x /dwl/init.sh && chown root:sudo -R /dwl
 USER admin
