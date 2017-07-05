@@ -6,6 +6,11 @@
 # Author: Michael Conigliaro <mike [at] conigliaro [dot] org>
 #
 
+if [ "${DWLC_USER_NAME}" == "" ]; then
+    export DWLC_USER_NAME=${DWL_USER_NAME:-`whoami`};
+    echo "Set DWLC_USER_NAME as ${DWLC_USER_NAME}";
+fi
+
 # reset to safe defaults
 find /home/${DWLC_USER_NAME}/files -exec chown ${DWLC_USER_NAME}:${DWLC_USER_NAME} {} \;
 find /home/${DWLC_USER_NAME}/files -type d -exec chmod 775 {} \;

@@ -1,16 +1,15 @@
 FROM davask/d-php-letsencrypt:5.6-a2.4-u14.04
 MAINTAINER davask <docker@davaskweblimited.com>
-LABEL dwl.app.cms="WordPress"
-
-
-RUN wget https://wordpress.org/wordpress-4.4.2.tar.gz -O /dwl/default/var/www/wordpress-4.4.2.tar.gz
-RUN rm -rdf /dwl/default/var/www/html
-RUN tar -xzvf /dwl/default/var/www/wordpress-4.4.2.tar.gz -C /dwl/default/var/www
-RUN rm /dwl/default/var/www/wordpress-4.4.2.tar.gz
-RUN mv /dwl/default/var/www/wordpress /dwl/default/var/www/html
+USER root
+LABEL dwl.app.cms="WordPress 4.4.2"
 
 # Copy instantiation specific file
-COPY ./build/dwl/get-wordpress.sh /dwl/get-wordpress.sh
-COPY ./build/dwl/fix-wordpress-permissions.sh /dwl/fix-wordpress-permissions.sh
-COPY ./build/dwl/init.sh /dwl/init.sh
+COPY ./build/dwl/get-wordpress.sh \
+./build/dwl/fix-wordpress-permissions.sh \
+./build/dwl/init.sh \
+/dwl/
 
+CMD ["/dwl/init.sh && service sendmail start && apachectl -k graceful && /bin/bash"]
+
+RUN chmod +x /dwl/init.sh && chown root:sudo -R /dwl
+USER admin
