@@ -1,12 +1,15 @@
-FROM davask/d-php-letsencrypt:7.0-a2.4-d8.8
+FROM davask/d-php-letsencrypt:5.6-a2.4-u16.04
 MAINTAINER davask <docker@davaskweblimited.com>
 USER root
-LABEL dwl.app.cms="WordPress"
-
+LABEL dwl.app.cms="WordPress 4.4.2"
 
 # Copy instantiation specific file
-COPY ./build/dwl/get-wordpress.sh /dwl/get-wordpress.sh
-COPY ./build/dwl/fix-wordpress-permissions.sh /dwl/fix-wordpress-permissions.sh
-COPY ./build/dwl/init.sh /dwl/init.sh
-USER admin
+COPY ./build/dwl/get-wordpress.sh \
+COPY ./build/dwl/fix-wordpress-permissions.sh \
+COPY ./build/dwl/init.sh \
+/dwl/
 
+CMD ["/dwl/init.sh && service sendmail start && apachectl -k graceful && /bin/bash"]
+
+RUN chmod +x /dwl/init.sh && chown root:sudo -R /dwl
+USER admin
