@@ -40,11 +40,11 @@
 - /etc/letsencrypt
 ## LABEL
 
-- dwl.server.os="php-letsencrypt 4.4.2-p5.6-a2.4-u16.04"
+- dwl.server.os="php-letsencrypt 4.4.2-p7.0-a2.4-u16.04"
 
-- dwl.server.base="wordpress 4.4.2-p5.6-a2.4-u16.04"
+- dwl.server.base="wordpress 4.4.2-p7.0-a2.4-u16.04"
 
-- dwl.server.http="apache 4.4.2-p5.6-a2.4-u16.04"
+- dwl.server.http="apache 4.4.2-p7.0-a2.4-u16.04"
 
 ## EXTRA
 

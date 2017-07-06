@@ -23,7 +23,7 @@ app:
     DWL_PHP_DATETIMEZONE: 'Europe/Paris'
   tty: true
   hostname: localhost
-  image: davask/d-wordpress:4.4.2-p5.6-a2.4-u16.04
+  image: davask/d-wordpress:4.4.2-p7.0-a2.4-u16.04
   net: bridge
   volumes:
     - ./volumes/home/username:/home/username
