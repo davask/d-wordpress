@@ -4,3 +4,5 @@ cd .; cd -;
 
 dwlDir="/dwl";
 
+
+tail -f /dev/null;
