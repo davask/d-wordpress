@@ -1,6 +1,8 @@
-#! /bin/sh -e
+#!/bin/bash
 
-cd .; cd -;
+cd ~/;
 
 dwlDir="/dwl";
 
+
+tail -f /dev/null;
