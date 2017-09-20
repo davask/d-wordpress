@@ -42,5 +42,6 @@ echo ">> Php initialized";
 . ${dwlDir}/fix-wordpress-permissions.sh
 echo ">> Wordpress initialized";
 
+. ${dwlDir}/custom.sh
 
 tail -f /dev/null;
