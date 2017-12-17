@@ -1,13 +1,13 @@
 # dockerfile
 
-[![[dwl] wordpress:4.4.2-p5.6-a2.4-u16.04 in prod][badge-shields]](https://hub.docker.com/r/davask/d-wordpress/)
-[![[dwl] wordpress:4.4.2-p5.6-a2.4-u16.04 license][badge-license]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-wordpress?ref=badge_shield)
+[![[dwl] wordpress:4.4.2-p7.0-a2.4-d8.8 in prod][badge-shields]](https://hub.docker.com/r/davask/d-wordpress/)
+[![[dwl] wordpress:4.4.2-p7.0-a2.4-d8.8 license][badge-license]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-wordpress?ref=badge_shield)
 
-[![[dwl] wordpress:4.4.2-p5.6-a2.4-u16.04 image][badge-docker]](https://hub.docker.com/r/davask/d-wordpress/)
+[![[dwl] wordpress:4.4.2-p7.0-a2.4-d8.8 image][badge-docker]](https://hub.docker.com/r/davask/d-wordpress/)
 
-[badge-docker]: https://dockeri.co/image/davask/d-wordpress "[dwl] wordpress:4.4.2-p5.6-a2.4-u16.04 image"
-[badge-shields]: https://img.shields.io/badge/davask%2Fd--wordpress-env_prod-brightgreen.svg?style=flat "[dwl] wordpress:4.4.2-p5.6-a2.4-u16.04 in prod"
-[badge-license]: https://img.shields.io/badge/davask%2Fd--wordpress-license_MIT-brightgreen.svg?style=flat "[dwl] wordpress:4.4.2-p5.6-a2.4-u16.04 license"
+[badge-docker]: https://dockeri.co/image/davask/d-wordpress "[dwl] wordpress:4.4.2-p7.0-a2.4-d8.8 image"
+[badge-shields]: https://img.shields.io/badge/davask%2Fd--wordpress-env_prod-brightgreen.svg?style=flat "[dwl] wordpress:4.4.2-p7.0-a2.4-d8.8 in prod"
+[badge-license]: https://img.shields.io/badge/davask%2Fd--wordpress-license_MIT-brightgreen.svg?style=flat "[dwl] wordpress:4.4.2-p7.0-a2.4-d8.8 license"
 
 ## Exposed port
 
@@ -49,11 +49,11 @@
 - /etc/letsencrypt
 ## LABEL
 
-- dwl.server.os="php-letsencrypt 4.4.2-p5.6-a2.4-u16.04"
+- dwl.server.os="php-letsencrypt 4.4.2-p7.0-a2.4-d8.8"
 
-- dwl.server.base="wordpress 4.4.2-p5.6-a2.4-u16.04"
+- dwl.server.base="wordpress 4.4.2-p7.0-a2.4-d8.8"
 
-- dwl.server.http="apache 4.4.2-p5.6-a2.4-u16.04"
+- dwl.server.http="apache 4.4.2-p7.0-a2.4-d8.8"
 
 ## EXTRA
 
