@@ -1,9 +1,9 @@
 [
   {
-    "title": "WordPress 4.4.2 + TSL",
-    "description": "w4.4.2 + letsencrypt (optional)",
+    "title": "WordPress 5.5.1 + TSL",
+    "description": "w5.5.1 + letsencrypt (optional)",
     "logo": "https://s.w.org/about/images/logos/wordpress-logo-notext-rgb.png",
-    "image": "davask/d-wordpress:4.4.2-p7.0-a2.4-d8.8",
+    "image": "davask/d-wordpress:5.5.1-p7.3-a2.4-d9.0",
     "ports": [
         "22/tcp",
         "80/tcp",
@@ -30,7 +30,7 @@
             "label": "Enable ssh access [false]"
         },{
             "name": "DWL_HTTP_SERVERADMIN",
-            "label": "Server Admin email address [admin@localhost]"
+            "label": "Server Admin email address [admin@davask.com]"
         },{
             "name": "DWL_HTTP_DOCUMENTROOT",
             "label": "Document root [/var/www]"
@@ -48,13 +48,13 @@
             "label": "Locality Name (eg, city) [Vannes]"
         }{
             "name": "DWL_SSLKEY_O",
-            "label": "Organization Name (eg, company) [davask web limited - docker container]"
+            "label": "Organization Name (eg, company) [davask - docker container]"
         }{
             "name": "DWL_SSLKEY_CN",
-            "label": "Common Name (e.g. server FQDN or YOUR name) [davaskweblimited.com]"
+            "label": "Common Name (e.g. server FQDN or YOUR name) [davask.com]"
         }{
             "name": "DWL_CERTBOT_EMAIL",
-            "label": "Certbot email contact [admin@localhost]"
+            "label": "Certbot email contact [admin@davask.com]"
         }{
             "name": "DWL_CERTBOT_DEBUG",
             "label": "Certbot debug mode [true]"

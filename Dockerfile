@@ -1,7 +1,7 @@
-FROM davask/d-php-letsencrypt:7.0-a2.4-d8.8
-MAINTAINER davask <docker@davaskweblimited.com>
+FROM davask/d-php-letsencrypt:latest
+MAINTAINER davask <admin@davask.com>
 USER root
-LABEL dwl.app.cms="WordPress 4.4.2"
+LABEL dwl.app.cms="WordPress 5.5.1"
 
 # Copy instantiation specific file
 COPY ./build/dwl/get-wordpress.sh \
